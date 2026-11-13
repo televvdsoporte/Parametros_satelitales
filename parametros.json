@@ -1,5 +1,6 @@
 [
   {
+    "formato" : "ESPN",
     "pais": "Colombia",
     "programadora": "TWDC",
     "senal": "ESPN1",
@@ -9,6 +10,39 @@
     "modulacion": "DVB-S2",
     "vct": "978",
     "vcn": "830"
+  },
+  {
+    "pais": "Colombia",
+    "programadora": "TWDC",
+    "senal": "ESPN2",
+    "satelite": "INTELSAT-34",
+    "polaridad": "H",
+    "frecuencia": "1135",
+    "modulacion": "DVB-S2",
+    "vct": "966",
+    "vcn": "920"
+  },
+  {
+    "pais": "Colombia",
+    "programadora": "TWDC",
+    "senal": "ESPN3",
+    "satelite": "SES-6",
+    "polaridad": "R",
+    "frecuencia": "972.5",
+    "modulacion": "DVB-S2",
+    "vct": "978",
+    "vcn": "850"
+  },
+  {
+    "pais": "Colombia",
+    "programadora": "TWDC",
+    "senal": "ESPN4",
+    "satelite": "INTELSAT-34",
+    "polaridad": "H",
+    "frecuencia": "1135",
+    "modulacion": "DVB-S2",
+    "vct": "966",
+    "vcn": "950"
   },
   {
     "pais": "Colombia",
