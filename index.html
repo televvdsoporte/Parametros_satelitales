@@ -1,105 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parámetros Satelitales</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 30px;
-    background: #f4f6f9;
-    color: #222;
-}
+    <title>Parámetros Satelitales</title>
 
-h1 {
-    text-align: center;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-.contenedor {
-    max-width: 1200px;
-    margin: auto;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 25px;
+            background: #f3f5f8;
+            color: #222;
+        }
 
-.filtros {
-    display: flex;
-    gap: 12px;
-    margin: 25px 0;
-    flex-wrap: wrap;
-}
+        .contenedor {
+            max-width: 1250px;
+            margin: auto;
+        }
 
-select, input {
-    padding: 12px;
-    font-size: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        header {
+            background: #142d4e;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
 
-input {
-    flex: 1;
-    min-width: 220px;
-}
+        header h1 {
+            margin: 0 0 8px;
+        }
 
-select {
-    min-width: 200px;
-}
+        header p {
+            margin: 0;
+            color: #dce6f2;
+        }
 
-.programadora {
-    background: white;
-    padding: 18px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px #ddd;
-}
+        .busqueda {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
 
-h2 {
-    color: #174b7a;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-}
+        select,
+        input {
+            padding: 12px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: white;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    overflow-x: auto;
-}
+        select {
+            min-width: 220px;
+        }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-    white-space: nowrap;
-}
+        input {
+            flex: 1;
+            min-width: 220px;
+        }
 
-th {
-    background: #174b7a;
-    color: white;
-}
+        .programadora {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 9px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+        }
 
-tr:nth-child(even) {
-    background: #f2f5f8;
-}
+        .programadora h2 {
+            color: #142d4e;
+            border-bottom: 2px solid #e5eaf0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
 
-.tabla-contenedor {
-    overflow-x: auto;
-}
+        .formato {
+            margin-top: 22px;
+        }
 
-#mensaje {
-    text-align: center;
-    padding: 20px;
-}
-</style>
+        .formato h3 {
+            color: #315b83;
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .tabla-contenedor {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 750px;
+            font-size: 14px;
+        }
+
+        th {
+            background: #e8eef5;
+            color: #142d4e;
+            text-align: left;
+            padding: 12px;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 11px;
+            border-bottom: 1px solid #e5e5e5;
+            white-space: nowrap;
+        }
+
+        tr:hover td {
+            background: #f7f9fc;
+        }
+
+        .mensaje {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: #555;
+        }
+
+        .error {
+            color: #b42318;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            .programadora {
+                padding: 14px;
+            }
+
+            select,
+            input {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <div class="contenedor">
 
-    <h1>Portal de Parámetros Satelitales</h1>
+    <header>
+        <h1>Parámetros Satelitales</h1>
+        <p>Consulta de señales y configuraciones técnicas por país y programadora.</p>
+    </header>
 
-    <div class="filtros">
+    <div class="busqueda">
 
         <select id="pais">
             <option value="">Seleccionar país</option>
@@ -107,7 +170,7 @@ tr:nth-child(even) {
 
         <input
             type="text"
-            id="busqueda"
+            id="buscar"
             placeholder="Buscar señal..."
             disabled
         >
@@ -115,7 +178,9 @@ tr:nth-child(even) {
     </div>
 
     <div id="resultados">
-        <p id="mensaje">Selecciona un país para consultar las señales.</p>
+        <div class="mensaje">
+            Selecciona un país para consultar las señales disponibles.
+        </div>
     </div>
 
 </div>
@@ -124,152 +189,326 @@ tr:nth-child(even) {
 
 let parametros = [];
 
-const selectorPais = document.getElementById("pais");
-const busqueda = document.getElementById("busqueda");
+const paisSelect = document.getElementById("pais");
+const buscarInput = document.getElementById("buscar");
 const resultados = document.getElementById("resultados");
-const mensaje = document.getElementById("mensaje");
 
-// Cargar información desde parametros.json
-fetch("parametros.json")
-.then(respuesta => {
-    if (!respuesta.ok) {
-        throw new Error("No se pudo cargar el archivo de parámetros.");
+
+// Evita que los datos del JSON se interpreten como código HTML.
+function escapar(valor) {
+    return String(valor ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+
+// Columnas correspondientes a cada formato.
+const formatos = {
+
+    general: {
+        titulo: "Formato general",
+        columnas: [
+            ["senal", "Señal"],
+            ["satelite", "Satelite"],
+            ["polaridad", "Polaridad"],
+            ["frecuencia", "Frecuencia"],
+            ["sr", "SR"],
+            ["net_id", "Net Id"],
+            ["modulacion", "Modulacion"],
+            ["canal_virtual", "Canal Virtual"]
+        ]
+    },
+
+    vct_vcn: {
+        titulo: "Formato VCT / VCN",
+        columnas: [
+            ["senal", "Señal"],
+            ["satelite", "Satelite"],
+            ["polaridad", "Polaridad"],
+            ["frecuencia", "Frecuencia"],
+            ["sr", "SR"],
+            ["modulacion", "Modulacion"],
+            ["vct", "VCT"],
+            ["vcn", "VCN"]
+        ]
+    },
+
+    transmision: {
+        titulo: "Formato con transmisión",
+        columnas: [
+            ["senal", "Señal"],
+            ["satelite", "Satelite"],
+            ["polaridad", "Polaridad"],
+            ["frecuencia", "Frecuencia"],
+            ["sr", "SR"],
+            ["transmision", "Transmision"],
+            ["modulacion", "Modulacion"]
+        ]
+    },
+
+    ecuador_1: {
+        titulo: "Formato Ecuador 1",
+        columnas: [
+            ["senal", "Señal"],
+            ["satelite", "Satelite"],
+            ["polaridad", "Polaridad"],
+            ["frecuencia", "Frecuencia"],
+            ["sr", "SR"],
+            ["net_id", "Net Id"],
+            ["roll_off", "Roll Off"],
+            ["canal_virtual", "Canal Virtual"],
+            ["modelo", "Modelo"]
+        ]
+    },
+
+    ecuador_2: {
+        titulo: "Formato Ecuador 2",
+        columnas: [
+            ["senal", "Señal"],
+            ["satelite", "Satelite"],
+            ["polaridad", "Polaridad"],
+            ["frecuencia", "Frecuencia"],
+            ["sr", "SR"],
+            ["roll_off", "Roll Off"],
+            ["vc", "VC"],
+            ["vct", "VCT"],
+            ["modelo", "Modelo"],
+            ["audio", "AUDIO"]
+        ]
     }
-    return respuesta.json();
-})
-.then(datos => {
 
-    parametros = datos;
+};
+
+
+// Carga la información desde el archivo JSON.
+async function cargarParametros() {
+
+    try {
+
+        const respuesta = await fetch("parametros.json");
+
+        if (!respuesta.ok) {
+            throw new Error("No fue posible cargar el archivo JSON.");
+        }
+
+        parametros = await respuesta.json();
+
+        cargarPaises();
+
+    } catch (error) {
+
+        resultados.innerHTML = `
+            <div class="mensaje error">
+                No fue posible cargar los parámetros.
+                Verifica que el archivo parametros.json esté disponible.
+            </div>
+        `;
+
+        console.error(error);
+
+    }
+
+}
+
+
+// Crea las opciones de países.
+function cargarPaises() {
 
     const paises = [...new Set(
-        parametros.map(dato => dato.pais)
-    )].sort();
+        parametros
+            .map(item => item.pais)
+            .filter(Boolean)
+    )].sort((a, b) => a.localeCompare(b));
+
+    paisSelect.innerHTML = '<option value="">Seleccionar país</option>';
 
     paises.forEach(pais => {
 
         const opcion = document.createElement("option");
+
         opcion.value = pais;
         opcion.textContent = pais;
 
-        selectorPais.appendChild(opcion);
+        paisSelect.appendChild(opcion);
 
     });
 
-})
-.catch(error => {
+}
 
-    resultados.innerHTML =
-        "<p>Error al cargar los parámetros. Verifica el archivo parametros.json.</p>";
 
-    console.error(error);
+// Escucha el cambio de país.
+paisSelect.addEventListener("change", () => {
 
-});
+    buscarInput.value = "";
 
-// Seleccionar país
-selectorPais.addEventListener("change", () => {
+    buscarInput.disabled = !paisSelect.value;
 
-    busqueda.value = "";
-
-    if (selectorPais.value === "") {
-        busqueda.disabled = true;
-        resultados.innerHTML =
-            "<p id='mensaje'>Selecciona un país para consultar las señales.</p>";
-        return;
+    if (paisSelect.value) {
+        mostrarResultados();
+    } else {
+        resultados.innerHTML = `
+            <div class="mensaje">
+                Selecciona un país para consultar las señales disponibles.
+            </div>
+        `;
     }
 
-    busqueda.disabled = false;
-    mostrarResultados();
-
 });
 
-// Buscar señal
-busqueda.addEventListener("input", mostrarResultados);
 
-// Mostrar señales agrupadas por programadora
+// Escucha las búsquedas de señales.
+buscarInput.addEventListener("input", mostrarResultados);
+
+
+// Organiza y muestra las señales.
 function mostrarResultados() {
 
-    const paisSeleccionado = selectorPais.value;
-    const texto = busqueda.value.toLowerCase().trim();
+    const paisSeleccionado = paisSelect.value;
 
-    const filtrados = parametros.filter(dato => {
+    const busqueda = buscarInput.value
+        .trim()
+        .toLowerCase();
 
-        return dato.pais === paisSeleccionado &&
-            dato.senal.toLowerCase().includes(texto);
+    if (!paisSeleccionado) {
+        return;
+    }
+
+    const registros = parametros.filter(item => {
+
+        const coincidePais = item.pais === paisSeleccionado;
+
+        const coincideSenal = String(item.senal ?? "")
+            .toLowerCase()
+            .includes(busqueda);
+
+        return coincidePais && coincideSenal;
 
     });
 
-    if (filtrados.length === 0) {
+    if (registros.length === 0) {
 
-        resultados.innerHTML = "<p>No se encontraron señales.</p>";
-        return;
-
-    }
-
-    const programadoras = [...new Set(
-        filtrados.map(dato => dato.programadora)
-    )].sort();
-
-    let html = "";
-
-    programadoras.forEach(programadora => {
-
-        const senales = filtrados.filter(
-            dato => dato.programadora === programadora
-        );
-
-        html += `
-            <div class="programadora">
-
-                <h2>${programadora}</h2>
-
-                <div class="tabla-contenedor">
-                <table>
-
-                    <thead>
-                        <tr>
-                            <th>Señal</th>
-                            <th>Satélite</th>
-                            <th>Polaridad</th>
-                            <th>Frecuencia</th>
-                            <th>SR</th>
-                            <th>Net ID</th>
-                            <th>Modulación</th>
-                            <th>Canal Virtual</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-        `;
-
-        senales.forEach(dato => {
-
-            html += `
-                <tr>
-                    <td>${dato.senal}</td>
-                    <td>${dato.satelite}</td>
-                    <td>${dato.polaridad}</td>
-                    <td>${dato.frecuencia}</td>
-                    <td>${dato.sr}</td>
-                    <td>${dato.net_id}</td>
-                    <td>${dato.modulacion}</td>
-                    <td>${dato.canal_virtual}</td>
-                </tr>
-            `;
-
-        });
-
-        html += `
-                    </tbody>
-                </table>
-                </div>
+        resultados.innerHTML = `
+            <div class="mensaje">
+                No se encontraron señales para esta búsqueda.
             </div>
         `;
 
+        return;
+
+    }
+
+
+    // Agrupa las señales por programadora.
+    const programadoras = {};
+
+    registros.forEach(item => {
+
+        const nombre = item.programadora || "Sin programadora";
+
+        if (!programadoras[nombre]) {
+            programadoras[nombre] = {};
+        }
+
+        // Si el registro no tiene formato, utiliza el formato general.
+        const formato = formatos[item.formato]
+            ? item.formato
+            : "general";
+
+        if (!programadoras[nombre][formato]) {
+            programadoras[nombre][formato] = [];
+        }
+
+        programadoras[nombre][formato].push(item);
+
     });
+
+
+    let html = "";
+
+
+    // Construye una sección para cada programadora.
+    Object.keys(programadoras)
+        .sort((a, b) => a.localeCompare(b))
+        .forEach(nombre => {
+
+            html += `
+                <section class="programadora">
+                    <h2>${escapar(nombre)}</h2>
+            `;
+
+
+            // Construye una tabla por cada formato utilizado.
+            Object.keys(programadoras[nombre]).forEach(tipo => {
+
+                const configuracion = formatos[tipo];
+
+                const senales = programadoras[nombre][tipo];
+
+                html += `
+                    <div class="formato">
+                        <h3>${escapar(configuracion.titulo)}</h3>
+
+                        <div class="tabla-contenedor">
+                            <table>
+                                <thead>
+                                    <tr>
+                `;
+
+                configuracion.columnas.forEach(columna => {
+
+                    html += `<th>${escapar(columna[1])}</th>`;
+
+                });
+
+                html += `
+                                    </tr>
+                                </thead>
+                                <tbody>
+                `;
+
+
+                senales.forEach(senal => {
+
+                    html += "<tr>";
+
+                    configuracion.columnas.forEach(columna => {
+
+                        html += `
+                            <td>${escapar(senal[columna[0]])}</td>
+                        `;
+
+                    });
+
+                    html += "</tr>";
+
+                });
+
+
+                html += `
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+
+            });
+
+
+            html += "</section>";
+
+        });
+
 
     resultados.innerHTML = html;
 
 }
+
+
+// Inicia la carga de información.
+cargarParametros();
 
 </script>
 
