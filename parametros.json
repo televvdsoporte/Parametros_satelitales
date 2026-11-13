@@ -344,6 +344,80 @@
     "modulacion": "DVB-S2",
     "canal_virtual": "9"
   },
+{
+    "pais": "Colombia",
+    "programadora": "AMC",
+    "senal": "EL GOURMET",
+    "satelite": "SES-6",
+    "polaridad": "R",
+    "frecuencia": "4095",
+    "sr": "30",
+    "net_id": "1",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "3"
+  },
+{
+    "pais": "Colombia",
+    "programadora": "AMC",
+    "senal": "FILM & ARTS",
+    "satelite": "SES-6",
+    "polaridad": "R",
+    "frecuencia": "4095",
+    "sr": "30",
+    "net_id": "1",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "3"
+  },
+{
+    "pais": "Colombia",
+    "programadora": "ALTERNAS",
+    "senal": "PASIONES",
+    "satelite": "SES-6",
+    "polaridad": "L",
+    "frecuencia": "41906",
+    "sr": "7.33",
+    "net_id": "2",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "2"
+  },
+{
+    "pais": "Colombia",
+    "programadora": "ALTERNAS",
+    "senal": "VEPLUS",
+    "satelite": "SES-6",
+    "polaridad": "L",
+    "frecuencia": "417965",
+    "sr": "5.416",
+    "net_id": "3",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "5"
+  },
+{
+  "formato":"transmision"
+    "pais": "Colombia",
+    "programadora": "ALTERNAS",
+    "senal": "CINE LATINO",
+    "satelite": "EUTELSAT-117",
+    "polaridad": "H",
+    "frecuencia": "4020",
+    "sr": "30",
+    "transmision":"DVB-S2",
+    "modulacion": "DVB-S2 / 8PSK",
+  },
+  {
+  "formato":"transmision"
+    "pais": "Colombia",
+    "programadora": "ALTERNAS",
+    "senal": "MULTIPREMIER",
+    "satelite": "EUTELSAT-117",
+    "polaridad": "H",
+    "frecuencia": "4020",
+    "sr": "30",
+    "transmision":"DVB-S2",
+    "modulacion": "8PSK",
+  },
+
+
 
   
   {
