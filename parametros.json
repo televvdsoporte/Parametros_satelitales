@@ -47,5 +47,69 @@
     "net_id": "1",
     "modulacion": "DVB-S2",
     "canal_virtual": "1"
+  },
+
+
+  {
+    "pais": "Peru",
+    "programadora": "TWDC",
+    "senal": "ESPN5",
+    "satelite": "INTELSAT-34",
+    "polaridad": "V",
+    "frecuencia": "3925",
+    "sr": "30",
+    "net_id": "1",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "7"
+  },
+  {
+    "pais": "Peru",
+    "programadora": "TWDC",
+    "senal": "ESPN6",
+    "satelite": "INTELSAT-34",
+    "polaridad": "V",
+    "frecuencia": "3925",
+    "sr": "30",
+    "net_id": "1",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "9"
+  },
+  
+  {
+    "pais": "Peru",
+    "programadora": "TWDC",
+    "senal": "ESPN7",
+    "satelite": "INTELSAT-34",
+    "polaridad": "V",
+    "frecuencia": "3925",
+    "sr": "30",
+    "net_id": "1",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "10"
+  },
+  {
+    "pais": "Peru",
+    "programadora": "TWDC",
+    "senal": "DISNEY CHANNEL",
+    "satelite": "INTELSAT-34",
+    "polaridad": "V",
+    "frecuencia": "3925",
+    "sr": "30",
+    "net_id": "1",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "1"
+  },
+  {
+    "pais": "Peru",
+    "programadora": "TWDC",
+    "senal": "DISNEY JR",
+    "satelite": "INTELSAT-34",
+    "polaridad": "V",
+    "frecuencia": "3925",
+    "sr": "30",
+    "net_id": "1",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "2"
   }
+  
 ]
