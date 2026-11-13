@@ -75,7 +75,6 @@
     "modulacion": "DVB-S2",
     "canal_virtual": "9"
   },
-  
   {
     "pais": "Colombia",
     "programadora": "TWDC",
@@ -292,8 +291,6 @@
     "modulacion": "DVB-S2",
     "canal_virtual": "108"
   },
-
-  
   {
     "pais": "Colombia",
     "programadora": "DHE GROUPS",
@@ -305,10 +302,8 @@
     "net_id": "2",
     "modulacion": "DVB-S2",
     "canal_virtual": "226"
-  },
-
-  
-    {
+  }, 
+  {
     "pais": "Colombia",
     "programadora": "AMC",
     "senal": "AMC",
@@ -332,7 +327,7 @@
     "modulacion": "DVB-S2",
     "canal_virtual": "5"
   },
-    {
+  {
     "pais": "Colombia",
     "programadora": "AMC",
     "senal": "AMC SERIES",
@@ -344,7 +339,7 @@
     "modulacion": "DVB-S2",
     "canal_virtual": "9"
   },
-{
+  {
     "pais": "Colombia",
     "programadora": "AMC",
     "senal": "EL GOURMET",
@@ -356,7 +351,7 @@
     "modulacion": "DVB-S2",
     "canal_virtual": "3"
   },
-{
+  {
     "pais": "Colombia",
     "programadora": "AMC",
     "senal": "FILM & ARTS",
@@ -368,7 +363,7 @@
     "modulacion": "DVB-S2",
     "canal_virtual": "3"
   },
-{
+  {
     "pais": "Colombia",
     "programadora": "ALTERNAS",
     "senal": "PASIONES",
@@ -380,7 +375,7 @@
     "modulacion": "DVB-S2",
     "canal_virtual": "2"
   },
-{
+  {
     "pais": "Colombia",
     "programadora": "ALTERNAS",
     "senal": "VEPLUS",
@@ -392,8 +387,8 @@
     "modulacion": "DVB-S2",
     "canal_virtual": "5"
   },
-{
-  "formato":"transmision"
+  {
+    "formato":"transmision"
     "pais": "Colombia",
     "programadora": "ALTERNAS",
     "senal": "CINE LATINO",
@@ -416,10 +411,6 @@
     "transmision":"DVB-S2",
     "modulacion": "8PSK",
   },
-
-
-
-  
   {
     "pais": "Peru",
     "programadora": "TWDC",
@@ -444,7 +435,6 @@
     "modulacion": "DVB-S2",
     "canal_virtual": "9"
   },
-  
   {
     "pais": "Peru",
     "programadora": "TWDC",
