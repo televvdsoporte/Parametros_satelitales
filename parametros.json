@@ -7,6 +7,7 @@
     "satelite": "SES-6",
     "polaridad": "R",
     "frecuencia": "972.5",
+    "sr": "30",
     "modulacion": "DVB-S2",
     "vct": "978",
     "vcn": "830"
@@ -19,6 +20,7 @@
     "satelite": "INTELSAT-34",
     "polaridad": "H",
     "frecuencia": "1135",
+    "sr": "30",
     "modulacion": "DVB-S2",
     "vct": "966",
     "vcn": "920"
@@ -31,6 +33,7 @@
     "satelite": "SES-6",
     "polaridad": "R",
     "frecuencia": "972.5",
+    "sr": "30",
     "modulacion": "DVB-S2",
     "vct": "978",
     "vcn": "850"
@@ -43,6 +46,7 @@
     "satelite": "INTELSAT-34",
     "polaridad": "H",
     "frecuencia": "1135",
+    "sr": "30",
     "modulacion": "DVB-S2",
     "vct": "966",
     "vcn": "950"
