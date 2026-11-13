@@ -1,0 +1,26 @@
+[
+  {
+    "pais": "Colombia",
+    "programadora": "TWDC",
+    "senal": "ESPN",
+    "satelite": "SES-6",
+    "polaridad": "H",
+    "frecuencia": "12345",
+    "sr": "30000",
+    "net_id": "100",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "100"
+  },
+  {
+    "pais": "Colombia",
+    "programadora": "Discovery",
+    "senal": "Discovery Channel",
+    "satelite": "Intelsat 21",
+    "polaridad": "V",
+    "frecuencia": "12456",
+    "sr": "27500",
+    "net_id": "200",
+    "modulacion": "DVB-S2",
+    "canal_virtual": "201"
+  }
+]
