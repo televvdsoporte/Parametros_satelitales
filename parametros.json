@@ -1,6 +1,6 @@
 [
   {
-    "formato" : "ESPN",
+    "formato" : "vct_vcn",
     "pais": "Colombia",
     "programadora": "TWDC",
     "senal": "ESPN1",
@@ -12,6 +12,7 @@
     "vcn": "830"
   },
   {
+    "formato" : "vct_vcn",
     "pais": "Colombia",
     "programadora": "TWDC",
     "senal": "ESPN2",
@@ -23,6 +24,7 @@
     "vcn": "920"
   },
   {
+    "formato" : "vct_vcn",
     "pais": "Colombia",
     "programadora": "TWDC",
     "senal": "ESPN3",
@@ -34,6 +36,7 @@
     "vcn": "850"
   },
   {
+    "formato" : "vct_vcn",
     "pais": "Colombia",
     "programadora": "TWDC",
     "senal": "ESPN4",
