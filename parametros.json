@@ -388,7 +388,7 @@
     "canal_virtual": "5"
   },
   {
-    "formato":"transmision"
+    "formato":"transmision",
     "pais": "Colombia",
     "programadora": "ALTERNAS",
     "senal": "CINE LATINO",
@@ -397,10 +397,10 @@
     "frecuencia": "4020",
     "sr": "30",
     "transmision":"DVB-S2",
-    "modulacion": "DVB-S2 / 8PSK",
+    "modulacion": "DVB-S2 / 8PSK"
   },
   {
-  "formato":"transmision"
+  "formato":"transmision",
     "pais": "Colombia",
     "programadora": "ALTERNAS",
     "senal": "MULTIPREMIER",
@@ -409,7 +409,7 @@
     "frecuencia": "4020",
     "sr": "30",
     "transmision":"DVB-S2",
-    "modulacion": "8PSK",
+    "modulacion": "8PSK"
   },
   {
     "pais": "Peru",
