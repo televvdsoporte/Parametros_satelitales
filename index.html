@@ -431,7 +431,6 @@ function mostrarResultados() {
 
     // Construye una sección para cada programadora.
     Object.keys(programadoras)
-        .sort((a, b) => a.localeCompare(b))
         .forEach(nombre => {
 
             html += `
