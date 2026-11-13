@@ -2,6 +2,17 @@
   {
     "pais": "Colombia",
     "programadora": "TWDC",
+    "senal": "ESPN1",
+    "satelite": "SES-6",
+    "polaridad": "R",
+    "frecuencia": "972.5",
+    "modulacion": "DVB-S2",
+    "vct": "978",
+    "vcn": "830"
+  },
+  {
+    "pais": "Colombia",
+    "programadora": "TWDC",
     "senal": "ESPN5",
     "satelite": "INTELSAT-34",
     "polaridad": "V",
