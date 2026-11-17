@@ -189,6 +189,12 @@
 
 let parametros = [];
 
+const archivosPaises = {
+    colombia: "datos/colombia.json",
+    peru: "datos/peru.json",
+    ecuador: "datos/ecuador.json"
+};
+
 const paisSelect = document.getElementById("pais");
 const buscarInput = document.getElementById("buscar");
 const resultados = document.getElementById("resultados");
@@ -284,11 +290,17 @@ const formatos = {
 
 
 // Carga la información desde el archivo JSON.
-async function cargarParametros() {
+async function cargarParametros(archivo) {
 
     try {
 
-        const respuesta = await fetch("parametros.json");
+        resultados.innerHTML = `
+            <div class="mensaje">
+                Cargando parámetros...
+            </div>
+        `;
+
+        const respuesta = await fetch(archivo);
 
         if (!respuesta.ok) {
             throw new Error("No fue posible cargar el archivo JSON.");
@@ -296,14 +308,14 @@ async function cargarParametros() {
 
         parametros = await respuesta.json();
 
-        cargarPaises();
+        mostrarResultados();
 
     } catch (error) {
 
         resultados.innerHTML = `
             <div class="mensaje error">
                 No fue posible cargar los parámetros.
-                Verifica que el archivo parametros.json esté disponible.
+                Verifica que el archivo JSON esté disponible.
             </div>
         `;
 
@@ -317,24 +329,12 @@ async function cargarParametros() {
 // Crea las opciones de países.
 function cargarPaises() {
 
-    const paises = [...new Set(
-        parametros
-            .map(item => item.pais)
-            .filter(Boolean)
-    )].sort((a, b) => a.localeCompare(b));
-
-    paisSelect.innerHTML = '<option value="">Seleccionar país</option>';
-
-    paises.forEach(pais => {
-
-        const opcion = document.createElement("option");
-
-        opcion.value = pais;
-        opcion.textContent = pais;
-
-        paisSelect.appendChild(opcion);
-
-    });
+    paisSelect.innerHTML = `
+        <option value="">Seleccionar país</option>
+        <option value="colombia">Colombia</option>
+        <option value="peru">Perú</option>
+        <option value="ecuador">Ecuador</option>
+    `;
 
 }
 
@@ -344,20 +344,27 @@ paisSelect.addEventListener("change", () => {
 
     buscarInput.value = "";
 
+    parametros = [];
+
     buscarInput.disabled = !paisSelect.value;
 
     if (paisSelect.value) {
-        mostrarResultados();
+
+        const archivo = archivosPaises[paisSelect.value];
+
+        cargarParametros(archivo);
+
     } else {
+
         resultados.innerHTML = `
             <div class="mensaje">
                 Selecciona un país para consultar las señales disponibles.
             </div>
         `;
+
     }
 
 });
-
 
 // Escucha las búsquedas de señales.
 buscarInput.addEventListener("input", mostrarResultados);
@@ -378,13 +385,11 @@ function mostrarResultados() {
 
     const registros = parametros.filter(item => {
 
-        const coincidePais = item.pais === paisSeleccionado;
+    const coincideSenal = String(item.senal ?? "")
+        .toLowerCase()
+        .includes(busqueda);
 
-        const coincideSenal = String(item.senal ?? "")
-            .toLowerCase()
-            .includes(busqueda);
-
-        return coincidePais && coincideSenal;
+    return coincideSenal;
 
     });
 
@@ -506,7 +511,7 @@ function mostrarResultados() {
 
 
 // Inicia la carga de información.
-cargarParametros();
+cargarPaises();
 
 </script>
 
