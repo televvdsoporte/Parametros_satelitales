@@ -385,11 +385,11 @@ function mostrarResultados() {
 
     const registros = parametros.filter(item => {
 
-    const coincideSenal = String(item.senal ?? "")
-        .toLowerCase()
-        .includes(busqueda);
+        const coincideSenal = String(item.senal ?? "")
+            .toLowerCase()
+            .includes(busqueda);
 
-    return coincideSenal;
+        return coincideSenal;
 
     });
 
@@ -417,16 +417,25 @@ function mostrarResultados() {
             programadoras[nombre] = {};
         }
 
-        // Si el registro no tiene formato, utiliza el formato general.
+        // Identifica el formato del registro.
         const formato = formatos[item.formato]
             ? item.formato
             : "general";
 
-        if (!programadoras[nombre][formato]) {
-            programadoras[nombre][formato] = [];
+        // Separa los modelos del formato Ecuador 2.
+        const modelo = formato === "ecuador_2"
+            ? (item.modelo || "Sin modelo")
+            : "";
+
+        const claveGrupo = modelo
+            ? `${formato}::${modelo}`
+            : formato;
+
+        if (!programadoras[nombre][claveGrupo]) {
+            programadoras[nombre][claveGrupo] = [];
         }
 
-        programadoras[nombre][formato].push(item);
+        programadoras[nombre][claveGrupo].push(item);
 
     });
 
@@ -435,80 +444,85 @@ function mostrarResultados() {
 
 
     // Construye una sección para cada programadora.
-    Object.keys(programadoras)
-        .forEach(nombre => {
+    Object.keys(programadoras).forEach(nombre => {
+
+        html += `
+            <section class="programadora">
+                <h2>${escapar(nombre)}</h2>
+        `;
+
+
+        // Construye una tabla por cada formato y modelo.
+        Object.keys(programadoras[nombre]).forEach(tipo => {
+
+            const [formato, modelo] = tipo.split("::");
+
+            const configuracion = formatos[formato];
+
+            const senales = programadoras[nombre][tipo];
+
+            const encabezadoModelo = modelo
+                ? `<h3>${escapar(modelo)}</h3>`
+                : "";
 
             html += `
-                <section class="programadora">
-                    <h2>${escapar(nombre)}</h2>
+                <div class="formato">
+                    ${encabezadoModelo}
+
+                    <div class="tabla-contenedor">
+                        <table>
+                            <thead>
+                                <tr>
+            `;
+
+            configuracion.columnas.forEach(columna => {
+
+                html += `<th>${escapar(columna[1])}</th>`;
+
+            });
+
+            html += `
+                                </tr>
+                            </thead>
+                            <tbody>
             `;
 
 
-            // Construye una tabla por cada formato utilizado.
-            Object.keys(programadoras[nombre]).forEach(tipo => {
+            senales.forEach(senal => {
 
-                const configuracion = formatos[tipo];
-
-                const senales = programadoras[nombre][tipo];
-
-                html += `
-                    <div class="formato">
-
-                        <div class="tabla-contenedor">
-                            <table>
-                                <thead>
-                                    <tr>
-                `;
+                html += "<tr>";
 
                 configuracion.columnas.forEach(columna => {
 
-                    html += `<th>${escapar(columna[1])}</th>`;
+                    html += `
+                        <td>${escapar(senal[columna[0]])}</td>
+                    `;
 
                 });
 
-                html += `
-                                    </tr>
-                                </thead>
-                                <tbody>
-                `;
-
-
-                senales.forEach(senal => {
-
-                    html += "<tr>";
-
-                    configuracion.columnas.forEach(columna => {
-
-                        html += `
-                            <td>${escapar(senal[columna[0]])}</td>
-                        `;
-
-                    });
-
-                    html += "</tr>";
-
-                });
-
-
-                html += `
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                `;
+                html += "</tr>";
 
             });
 
 
-            html += "</section>";
+            html += `
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
 
         });
+
+
+        html += "</section>";
+
+    });
 
 
     resultados.innerHTML = html;
 
 }
-
 
 // Inicia la carga de información.
 cargarPaises();
