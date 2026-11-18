@@ -581,6 +581,7 @@
       "vct": 1,
       "roll_off": 0.20,
       "canal_virtual": 200,
+      "modelo":"Synamedia",
       "audio": "MPEG + AC3"
     },
     {
@@ -593,6 +594,7 @@
       "vct": 2,
       "roll_off": 0.20,
       "canal_virtual": 56,
+      "modelo":"Synamedia",
       "audio": "MPEG"
     },
     {
@@ -605,6 +607,7 @@
       "vct": 2,
       "roll_off": 0.20,
       "canal_virtual": 66,
+      "modelo":"Synamedia",
       "audio": "AC3"
     },
     {
@@ -617,6 +620,7 @@
       "vct": 2,
       "roll_off": 0.20,
       "canal_virtual": 67,
+      "modelo":"Synamedia",
       "audio": "MPEG"
     },
     {
@@ -629,6 +633,7 @@
       "vct": 2,
       "roll_off": 0.20,
       "canal_virtual": 167,
+      "modelo":"Synamedia",
       "audio": "AC3"
     },
     {
@@ -641,6 +646,7 @@
       "vct": 2,
       "roll_off": 0.20,
       "canal_virtual": 118,
+      "modelo":"Synamedia",
       "audio": "MPEG"
     },
     {
@@ -653,6 +659,7 @@
       "vct": 2,
       "roll_off": 0.20,
       "canal_virtual": 62,
+      "modelo":"Synamedia",
       "audio": "AC3"
     },
     {
@@ -665,6 +672,7 @@
       "vct": 2,
       "roll_off": 0.20,
       "canal_virtual": 84,
+      "modelo":"Synamedia",
       "audio": "MPEG"
     },
     {
@@ -677,6 +685,7 @@
       "vct": 2,
       "roll_off": 0.20,
       "canal_virtual": 86,
+      "modelo":"Synamedia",
       "audio": "AC3"
     },
     {
@@ -689,6 +698,7 @@
       "vct": 2,
       "roll_off": 0.20,
       "canal_virtual": 68,
+      "modelo":"Synamedia",
       "audio": "MPEG"
     },
     {
@@ -701,6 +711,7 @@
       "vct": 2,
       "roll_off": 0.20,
       "canal_virtual": 64,
+      "modelo":"Synamedia",
       "audio": "AC3"
     },
     {
@@ -712,6 +723,7 @@
       "sr": 30.0,
       "vct": 1,
       "roll_off": 0.20,
+      "modelo":"Synamedia",
       "canal_virtual": 190,
       "audio": "MPEG + AC3"
     },
@@ -725,6 +737,7 @@
       "vct": 1,
       "roll_off": 0.20,
       "canal_virtual": 33,
+      "modelo":"Synamedia",
       "audio": "MPEG"
     },
     {
@@ -737,6 +750,7 @@
       "vct": 1,
       "roll_off": 0.20,
       "canal_virtual": 163,
+      "modelo":"Synamedia",
       "audio": "AC3"
     }
 ]
