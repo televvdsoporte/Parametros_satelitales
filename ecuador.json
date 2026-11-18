@@ -102,11 +102,23 @@
   {
     "pais": "Ecuador",
     "programadora": "TWDC",
+    "senal": "DISNEY JR",
+    "satelite": "INTELSAT-34",
+    "polaridad": "V",
+    "frecuencia": "3925",
+    "sr": "30",
+    "net_id": "2",
+    "modulacion": "DVB-S2 / 8PSK",
+    "canal_virtual": "2"
+  },
+  {
+    "pais": "Ecuador",
+    "programadora": "TWDC",
     "senal": "CINE CANAL",
     "satelite": "INTELSAT-34",
     "polaridad": "V",
     "frecuencia": "4086",
-    "sr": "30",
+    "sr": "15",
     "net_id": "1",
     "modulacion": "DVB-S2",
     "canal_virtual": "26"
@@ -118,7 +130,7 @@
     "satelite": "INTELSAT-34",
     "polaridad": "V",
     "frecuencia": "4086",
-    "sr": "30",
+    "sr": "15",
     "net_id": "1",
     "modulacion": "DVB-S2 / 8PSK",
     "canal_virtual": "28"
@@ -130,7 +142,7 @@
     "satelite": "INTELSAT-34",
     "polaridad": "V",
     "frecuencia": "4086",
-    "sr": "30",
+    "sr": "15",
     "net_id": "1",
     "modulacion": "DVB-S2 / 8PSK",
     "canal_virtual": "30"
@@ -142,22 +154,10 @@
     "satelite": "INTELSAT-34",
     "polaridad": "V",
     "frecuencia": "4086",
-    "sr": "30",
+    "sr": "15",
     "net_id": "1",
     "modulacion": "DVB-S2 / 8PSK",
     "canal_virtual": "31"
-  },
-  {
-    "pais": "Ecuador",
-    "programadora": "TWDC",
-    "senal": "DISNEY JR",
-    "satelite": "INTELSAT-21",
-    "polaridad": "V",
-    "frecuencia": "3920",
-    "sr": "30",
-    "net_id": "2",
-    "modulacion": "DVB-S2 / 8PSK",
-    "canal_virtual": "34"
   },
   {
     "pais": "Ecuador",
