@@ -571,7 +571,8 @@
       "audio": "AC3"
     },
     {
-      "formato":"ecuador_2", "programadora":"TILA"
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "CINEMAX",
       "satelite": "INTELSAT 34",
       "polaridad": "H",
