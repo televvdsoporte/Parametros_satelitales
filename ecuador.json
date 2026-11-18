@@ -412,7 +412,8 @@
     "modulacion": "8PSK"
   },
     {
-      "formato":"ecuador_1",
+      "formato":"ecuador_1", 
+      "programadora":"TILA",
       "senal": "ADULT SWIM",
       "satelite": "IS-21",
       "polaridad": "V",
@@ -424,7 +425,8 @@
       "modelo": "D9865"
     },
     {
-      "formato":"ecuador_1",
+      "formato":"ecuador_1", 
+      "programadora":"TILA",
       "senal": "CARTOON NETWORK",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -436,7 +438,8 @@
       "modelo": "D9865"
     },
     {
-      "formato":"ecuador_1",
+      "formato":"ecuador_1", 
+      "programadora":"TILA",
       "senal": "CARTOONITO",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -448,7 +451,8 @@
       "modelo": "D9865"
     },
     {
-      "formato":"ecuador_1",
+      "formato":"ecuador_1", 
+      "programadora":"TILA",
       "senal": "SPACE",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -460,7 +464,8 @@
       "modelo": "AC3"
     },
     {
-      "formato":"ecuador_1",
+      "formato":"ecuador_1", 
+      "programadora":"TILA",
       "senal": "SPACE",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -472,7 +477,8 @@
       "modelo": "MPEG"
     },
     {
-      "formato":"ecuador_1",
+      "formato":"ecuador_1", 
+      "programadora":"TILA",
       "senal": "TCM",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -484,7 +490,8 @@
       "modelo": "D9865"
     },
     {
-      "formato":"ecuador_1",
+      "formato":"ecuador_1", 
+      "programadora":"TILA",
       "senal": "TNT",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -496,7 +503,8 @@
       "modelo": "D9865"
     },
     {
-      "formato":"ecuador_1",
+      "formato":"ecuador_1", 
+      "programadora":"TILA",
       "senal": "TNT NOVELAS",
       "satelite": "IS-21",
       "polaridad": "V",
@@ -508,7 +516,8 @@
       "modelo": "D9865"
     },
     {
-      "formato":"ecuador_1",
+      "formato":"ecuador_1", 
+      "programadora":"TILA",
       "senal": "TNT SERIES",
       "satelite": "IS-21",
       "polaridad": "H",
@@ -518,9 +527,10 @@
       "roll_off": 0.20,
       "canal_virtual": 46,
       "modelo": "D9865"
-    }
+    },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "CNNE",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -533,7 +543,8 @@
       "audio": "MPEG + AC3"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "CNNI",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -546,7 +557,8 @@
       "audio": "MPEG + AC3"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "WARNER",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -559,7 +571,7 @@
       "audio": "AC3"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", "programadora":"TILA"
       "senal": "CINEMAX",
       "satelite": "INTELSAT 34",
       "polaridad": "H",
@@ -570,9 +582,10 @@
       "vct": 111,
       "modelo": "ARRIS",
       "audio": "MPEG + AC3"
-    }
+    },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "ADULT SWIM",
       "satelite": "IS-21",
       "polaridad": "V",
@@ -585,7 +598,8 @@
       "audio": "MPEG + AC3"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "CARTOON NETWORK",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -598,7 +612,8 @@
       "audio": "MPEG"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "CARTOON NETWORK",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -611,7 +626,8 @@
       "audio": "AC3"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "CARTOONITO",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -624,7 +640,8 @@
       "audio": "MPEG"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "CARTOONITO",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -637,7 +654,8 @@
       "audio": "AC3"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "SPACE",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -650,7 +668,8 @@
       "audio": "MPEG"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "SPACE",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -663,7 +682,8 @@
       "audio": "AC3"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "TCM",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -676,7 +696,8 @@
       "audio": "MPEG"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "TCM",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -689,7 +710,8 @@
       "audio": "AC3"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "TNT",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -702,7 +724,8 @@
       "audio": "MPEG"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "TNT",
       "satelite": "INTELSAT 34",
       "polaridad": "V",
@@ -715,7 +738,8 @@
       "audio": "AC3"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "TNT NOVELAS",
       "satelite": "IS-21",
       "polaridad": "V",
@@ -728,7 +752,8 @@
       "audio": "MPEG + AC3"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "TNT SERIES",
       "satelite": "IS-21",
       "polaridad": "H",
@@ -741,7 +766,8 @@
       "audio": "MPEG"
     },
     {
-      "formato":"ecuador_2",
+      "formato":"ecuador_2", 
+      "programadora":"TILA",
       "senal": "TNT SERIES",
       "satelite": "IS-21",
       "polaridad": "H",
