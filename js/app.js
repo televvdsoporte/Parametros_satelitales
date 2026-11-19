@@ -9,6 +9,12 @@ const archivosPaises = {
 const paisSelect = document.getElementById("pais");
 const buscarInput = document.getElementById("buscar");
 const resultados = document.getElementById("resultados");
+const listaProgramadoras =
+    document.getElementById("lista-programadoras");
+
+const buscarProgramadora =
+    document.getElementById("buscar-programadora");
+
 
 // Referencias a los indicadores
 const indicadorPais = document.getElementById("indicador-pais");
@@ -286,10 +292,14 @@ function mostrarResultados() {
 
 
     // Construye una sección para cada programadora.
-    Object.keys(programadoras).forEach(nombre => {
+    Object.keys(programadoras).forEach((nombre, indice) => {
 
         html += `
-            <section class="programadora">
+            <section
+    class="programadora"
+    id="programadora-${indice}"
+    data-programadora="${escapar(nombre)}"
+    >
                 <h2>${escapar(nombre)}</h2>
         `;
 
@@ -364,7 +374,114 @@ function mostrarResultados() {
 
     resultados.innerHTML = html;
 
+    actualizarIndiceProgramadoras();
 }
+
+// Construye el índice lateral de programadoras.
+function actualizarIndiceProgramadoras() {
+
+    const secciones = resultados.querySelectorAll(".programadora");
+
+    if (!secciones.length) {
+        listaProgramadoras.innerHTML = `
+            <div class="indice-vacio">
+                No hay programadoras disponibles.
+            </div>
+        `;
+
+        return;
+    }
+
+    let html = "";
+
+    secciones.forEach((seccion, indice) => {
+
+        const nombre = seccion.dataset.programadora;
+
+        const senales = new Set(
+            Array.from(
+                seccion.querySelectorAll("tbody tr td:first-child")
+            )
+            .map(td => td.textContent.trim().toUpperCase())
+            .filter(Boolean)
+        );
+
+        html += `
+            <button
+                type="button"
+                class="item-programadora"
+                data-destino="programadora-${indice}"
+            >
+                <span class="nombre-programadora">
+                    ${escapar(nombre)}
+                </span>
+
+                <span class="contador-programadora">
+                    ${senales.size}
+                </span>
+            </button>
+        `;
+
+    });
+
+    listaProgramadoras.innerHTML = html;
+
+    // Acceso directo a cada programadora.
+    listaProgramadoras.querySelectorAll(".item-programadora")
+        .forEach(boton => {
+
+            boton.addEventListener("click", () => {
+
+                const destino = document.getElementById(
+                    boton.dataset.destino
+                );
+
+                if (destino) {
+
+                    destino.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                    listaProgramadoras
+                        .querySelectorAll(".item-programadora")
+                        .forEach(item => item.classList.remove("activo"));
+
+                    boton.classList.add("activo");
+                }
+
+            });
+
+        });
+
+    buscarProgramadora.disabled = false;
+
+    buscarProgramadora.value = "";
+
+}
+
+// Buscador del menú lateral.
+buscarProgramadora.addEventListener("input", () => {
+
+    const busqueda = buscarProgramadora.value
+        .trim()
+        .toLowerCase();
+
+    listaProgramadoras
+        .querySelectorAll(".item-programadora")
+        .forEach(boton => {
+
+            const nombre = boton.querySelector(
+                ".nombre-programadora"
+            ).textContent.toLowerCase();
+
+            boton.style.display = nombre.includes(busqueda)
+                ? "flex"
+                : "none";
+
+        });
+
+});
 
 // Inicia la carga de información.
 cargarPaises();
