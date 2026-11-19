@@ -32,20 +32,27 @@ body {
 
 
 /* =====================================
-   2. ENCABEZADO PREMIUM
+   2. ENCABEZADO PREMIUM TELE VVD
 ===================================== */
 
-header {
+header.encabezado {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(120deg, #272223 0%, #40383B 100%);
-    padding: 42px 45px;
+    background: linear-gradient(
+        120deg,
+        #272223 0%,
+        #40383B 65%,
+        #272223 100%
+    );
+
+    padding: 38px 45px;
     border-radius: 16px;
     margin-bottom: 25px;
+
     box-shadow: 0 8px 25px rgba(39, 34, 35, 0.15);
 }
 
-header::before {
+header.encabezado::before {
     content: "";
     position: absolute;
     right: -70px;
@@ -56,33 +63,95 @@ header::before {
     border-radius: 50%;
 }
 
-header::after {
+header.encabezado::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--rojo), transparent);
+    background: linear-gradient(90deg, #EE3244, transparent);
 }
 
-header h1 {
+.encabezado-contenido {
     position: relative;
     z-index: 1;
-    color: var(--blanco);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.encabezado-texto {
+    flex: 1;
+}
+
+.encabezado-etiqueta {
+    display: inline-block;
+    color: #EE3244;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+header.encabezado h1 {
+    color: #FFFFFF;
     font-size: 32px;
     font-weight: 700;
     letter-spacing: -0.7px;
     margin: 0 0 12px;
 }
 
-header p {
-    position: relative;
-    z-index: 1;
+header.encabezado p {
     color: #D5D1D2;
     font-size: 14px;
     line-height: 1.6;
     margin: 0;
+}
+
+.encabezado-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.encabezado-logo img {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Adaptación para móviles */
+
+@media (max-width: 700px) {
+
+    header.encabezado {
+        padding: 28px 22px;
+    }
+
+    .encabezado-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    header.encabezado h1 {
+        font-size: 25px;
+    }
+
+    .encabezado-logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .encabezado-logo img {
+        width: 200px;
+    }
 }
 
 
