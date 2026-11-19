@@ -1,6 +1,6 @@
-/* ==============================
-   CONFIGURACIÓN GENERAL
-============================== */
+/* =====================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+===================================== */
 
 * {
     box-sizing: border-box;
@@ -10,100 +10,116 @@
     --rojo: #EE3244;
     --rojo-oscuro: #C41D31;
     --negro: #272223;
-    --gris-fondo: #F6F7F9;
-    --gris-borde: #E8E9ED;
-    --gris-texto: #777D87;
+    --negro-claro: #353033;
+    --gris-fondo: #F0F2F5;
+    --gris-borde: #E1E4E9;
+    --gris-texto: #737985;
     --blanco: #FFFFFF;
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 35px 25px;
+    padding: 30px;
     background: var(--gris-fondo);
     color: var(--negro);
 }
 
-/* ==============================
-   CONTENEDOR PRINCIPAL
-============================== */
-
 .contenedor {
-    max-width: 1450px;
+    max-width: 1500px;
     margin: auto;
 }
 
-/* ==============================
-   ENCABEZADO
-============================== */
+
+/* =====================================
+   2. ENCABEZADO PREMIUM
+===================================== */
 
 header {
-    background: var(--blanco);
-    padding: 32px 38px;
-    border-radius: 14px;
-    border: 1px solid var(--gris-borde);
-    margin-bottom: 28px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.025);
+    background: linear-gradient(120deg, #272223 0%, #40383B 100%);
+    padding: 42px 45px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(39, 34, 35, 0.15);
 }
 
 header::before {
     content: "";
     position: absolute;
-    top: 0;
+    right: -70px;
+    top: -130px;
+    width: 350px;
+    height: 350px;
+    border: 45px solid rgba(238, 50, 68, 0.12);
+    border-radius: 50%;
+}
+
+header::after {
+    content: "";
+    position: absolute;
     left: 0;
-    width: 5px;
-    height: 100%;
-    background: var(--rojo);
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rojo), transparent);
 }
 
 header h1 {
-    font-size: 29px;
+    position: relative;
+    z-index: 1;
+    color: var(--blanco);
+    font-size: 32px;
     font-weight: 700;
-    margin: 0 0 10px;
-    letter-spacing: -0.6px;
-    color: var(--negro);
+    letter-spacing: -0.7px;
+    margin: 0 0 12px;
 }
 
 header p {
+    position: relative;
+    z-index: 1;
+    color: #D5D1D2;
     font-size: 14px;
-    color: var(--gris-texto);
-    margin: 0;
     line-height: 1.6;
+    margin: 0;
 }
 
-/* ==============================
-   BARRA DE BÚSQUEDA
-============================== */
+
+/* =====================================
+   3. ÁREA DE BÚSQUEDA
+===================================== */
 
 .busqueda {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
     background: var(--blanco);
-    padding: 22px;
     border-radius: 14px;
     border: 1px solid var(--gris-borde);
-    margin-bottom: 30px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.025);
+    border-left: 5px solid var(--rojo);
+    margin-bottom: 28px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
 }
 
 select,
 input {
-    height: 46px;
-    padding: 0 15px;
+    height: 48px;
+    padding: 0 16px;
     border: 1px solid var(--gris-borde);
     border-radius: 8px;
-    background: #FFFFFF;
+    background: #FAFAFB;
     font-size: 14px;
     color: var(--negro);
     outline: none;
-    transition: all 0.2s ease;
+    transition: 0.25s;
 }
 
 select {
-    min-width: 190px;
+    min-width: 210px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 input {
@@ -113,38 +129,58 @@ input {
 
 select:focus,
 input:focus {
+    background: var(--blanco);
     border-color: var(--rojo);
-    box-shadow: 0 0 0 3px rgba(238, 50, 68, 0.09);
+    box-shadow: 0 0 0 3px rgba(238, 50, 68, 0.12);
 }
 
-/* ==============================
-   SECCIONES POR PROGRAMADORA
-============================== */
+
+/* =====================================
+   4. SECCIONES DE PROGRAMADORAS
+===================================== */
 
 .programadora {
     background: var(--blanco);
-    border: 1px solid var(--gris-borde);
     border-radius: 14px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.025);
+    border: 1px solid var(--gris-borde);
+    margin-bottom: 26px;
+    padding: 26px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.045);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.programadora:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.075);
 }
 
 .programadora h2 {
-    font-size: 19px;
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     color: var(--negro);
-    margin: 0 0 22px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--gris-borde);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 23px;
+    padding-bottom: 17px;
+    border-bottom: 2px solid #F0F1F3;
 }
 
-/* ==============================
-   FORMATOS Y MODELOS
-============================== */
+.programadora h2::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 25px;
+    background: var(--rojo);
+    border-radius: 5px;
+}
+
+
+/* =====================================
+   5. FORMATOS Y MODELOS
+===================================== */
 
 .formato {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 }
 
 .formato:last-child {
@@ -152,27 +188,21 @@ input:focus {
 }
 
 .formato h3 {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--rojo-oscuro);
-    margin: 0 0 13px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 9px;
+    background: #FFF0F1;
+    color: var(--rojo-oscuro);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 15px;
+    border-radius: 6px;
+    margin: 0 0 14px;
 }
 
-.formato h3::before {
-    content: "";
-    width: 4px;
-    height: 17px;
-    background: var(--rojo);
-    border-radius: 5px;
-    display: inline-block;
-}
 
-/* ==============================
-   TABLAS
-============================== */
+/* =====================================
+   6. TABLAS TÉCNICAS
+===================================== */
 
 .tabla-contenedor {
     width: 100%;
@@ -184,44 +214,54 @@ input:focus {
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 13px;
     background: var(--blanco);
+    font-size: 13px;
 }
 
 th {
-    background: #F8F8FA;
-    color: #555B65;
-    font-weight: 700;
+    background: var(--negro);
+    color: var(--blanco);
     text-align: left;
-    padding: 14px 15px;
-    border-bottom: 1px solid var(--gris-borde);
+    font-weight: 600;
+    padding: 15px;
     white-space: nowrap;
+    border-right: 1px solid #454044;
+}
+
+th:last-child {
+    border-right: none;
 }
 
 td {
-    padding: 13px 15px;
-    border-bottom: 1px solid #F0F0F2;
-    color: #444951;
+    padding: 14px 15px;
+    color: #414650;
+    border-bottom: 1px solid #ECEEF1;
     white-space: nowrap;
+}
+
+tbody tr:nth-child(even) td {
+    background: #F7F8FA;
+}
+
+tbody tr:hover td {
+    background: #FFF0F1;
+    color: var(--negro);
 }
 
 tr:last-child td {
     border-bottom: none;
 }
 
-tr:hover td {
-    background: #FFF8F8;
-}
 
-/* ==============================
-   MENSAJES
-============================== */
+/* =====================================
+   7. MENSAJES
+===================================== */
 
 .mensaje {
     background: var(--blanco);
     border: 1px solid var(--gris-borde);
     border-radius: 12px;
-    padding: 35px 20px;
+    padding: 40px 20px;
     text-align: center;
     color: var(--gris-texto);
     font-size: 14px;
@@ -229,33 +269,35 @@ tr:hover td {
 
 .error {
     color: var(--rojo-oscuro);
-    background: #FFF5F5;
-    border: 1px solid #F5D4D8;
+    background: #FFF0F1;
+    border: 1px solid #F3C9CE;
     border-radius: 9px;
     padding: 15px;
 }
 
-/* ==============================
-   RESPONSIVE
-============================== */
+
+/* =====================================
+   8. RESPONSIVE
+===================================== */
 
 @media (max-width: 700px) {
 
     body {
-        padding: 18px 12px;
+        padding: 15px 10px;
     }
 
     header {
-        padding: 25px 22px;
+        padding: 30px 23px;
     }
 
     header h1 {
-        font-size: 23px;
+        font-size: 25px;
     }
 
     .busqueda {
         flex-direction: column;
-        padding: 16px;
+        align-items: stretch;
+        padding: 17px;
     }
 
     select,
@@ -277,6 +319,6 @@ tr:hover td {
 
     th,
     td {
-        padding: 11px 12px;
+        padding: 11px;
     }
 }
