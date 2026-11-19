@@ -10,6 +10,29 @@ const paisSelect = document.getElementById("pais");
 const buscarInput = document.getElementById("buscar");
 const resultados = document.getElementById("resultados");
 
+// Referencias a los indicadores
+const indicadorPais = document.getElementById("indicador-pais");
+const indicadorSenales = document.getElementById("indicador-senales");
+const indicadorProgramadoras = document.getElementById("indicador-programadoras");
+
+// Actualiza las tarjetas de indicadores
+function actualizarIndicadores() {
+
+    const pais = paisSelect.options[paisSelect.selectedIndex]?.text || "—";
+
+    const totalSenales = parametros.length;
+
+    const totalProgramadoras = new Set(
+        parametros.map(item => item.programadora || "Sin programadora")
+    ).size;
+
+    indicadorPais.textContent = paisSelect.value ? pais : "—";
+
+    indicadorSenales.textContent = totalSenales;
+
+    indicadorProgramadoras.textContent = totalProgramadoras;
+
+}
 
 // Evita que los datos del JSON se interpreten como código HTML.
 function escapar(valor) {
@@ -119,6 +142,8 @@ async function cargarParametros(archivo) {
 
         parametros = await respuesta.json();
 
+        actualizarIndicadores();
+
         mostrarResultados();
 
     } catch (error) {
@@ -158,6 +183,7 @@ paisSelect.addEventListener("change", () => {
     parametros = [];
 
     buscarInput.disabled = !paisSelect.value;
+    actualizarIndicadores();
 
     if (paisSelect.value) {
 
