@@ -6,41 +6,40 @@
 
     <title>Parámetros Satelitales</title>
 
-<link rel="stylesheet" href="css/estilos.css">
-    
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
 <div class="contenedor">
 
-<header class="encabezado">
-    <div class="encabezado-contenido">
+    <header class="encabezado">
+        <div class="encabezado-contenido">
 
-        <div class="encabezado-texto">
-            <span class="encabezado-etiqueta">
-                PLATAFORMA TÉCNICA
-            </span>
+            <div class="encabezado-texto">
+                <span class="encabezado-etiqueta">
+                    PLATAFORMA TÉCNICA
+                </span>
 
-            <h1>Parámetros Satelitales</h1>
+                <h1>Parámetros Satelitales</h1>
 
-            <p>
-                Consulta de señales y configuraciones técnicas
-                por país y programadora.
-            </p>
+                <p>
+                    Consulta de señales y configuraciones técnicas
+                    por país y programadora.
+                </p>
+            </div>
+
+            <div class="encabezado-logo">
+                <img
+                    src="logo%20Tele%20vvd.png"
+                    alt="TeleVVD"
+                >
+            </div>
+
         </div>
+    </header>
 
-        <div class="encabezado-logo">
-            <img
-                src="logo%20Tele%20vvd.png"
-                alt="TeleVVD"
-            >
-        </div>
-
-    </div>
-</header>
-    
-        <!-- INDICADORES DEL SISTEMA -->
+    <!-- INDICADORES -->
     <section class="indicadores">
 
         <div class="tarjeta-indicador">
@@ -68,7 +67,8 @@
         </div>
 
     </section>
-    
+
+    <!-- BÚSQUEDA -->
     <div class="busqueda">
 
         <select id="pais">
@@ -84,10 +84,41 @@
 
     </div>
 
-    <div id="resultados">
-        <div class="mensaje">
-            Selecciona un país para consultar las señales disponibles.
-        </div>
+    <!-- DISTRIBUCIÓN PRINCIPAL -->
+    <div class="distribucion">
+
+        <!-- MENÚ LATERAL -->
+        <aside id="indice-programadoras" class="indice-programadoras">
+
+            <div class="indice-cabecera">
+                <h2>Programadoras</h2>
+                <span>ÍNDICE</span>
+            </div>
+
+            <input
+                type="text"
+                id="buscar-programadora"
+                placeholder="Buscar programadora..."
+                disabled
+            >
+
+            <div id="lista-programadoras">
+                <div class="indice-vacio">
+                    Selecciona un país.
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- TABLAS -->
+        <main id="resultados">
+
+            <div class="mensaje">
+                Selecciona un país para consultar las señales disponibles.
+            </div>
+
+        </main>
+
     </div>
 
 </div>
