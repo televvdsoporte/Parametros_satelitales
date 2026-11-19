@@ -20,7 +20,12 @@ function actualizarIndicadores() {
 
     const pais = paisSelect.options[paisSelect.selectedIndex]?.text || "—";
 
-    const totalSenales = parametros.length;
+    // Contar señales únicas, sin duplicar por modelo o formato
+    const totalSenales = new Set(
+    parametros
+        .map(item => (item.senal || "").trim().toUpperCase())
+        .filter(Boolean)
+    ).size;
 
     const totalProgramadoras = new Set(
         parametros.map(item => item.programadora || "Sin programadora")
